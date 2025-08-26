@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# OS
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local uploads and media (do not commit raw A/V)
+uploads/
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.mov
+
+# Environment files (never commit secrets)
+.env
+*.env
+
+# Caches
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# Node (if ever added)
+node_modules/

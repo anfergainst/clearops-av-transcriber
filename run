@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Set environment variables (macOS/Linux bash)
+export OPENAI_API_KEY=$(OP_ACCOUNT="clearops.1password.com" op read "op://DevOps/openai-api-devops-llms/password")
+# Optional
+export APP_DEBUG=true
+export KEEP_UPLOADS=true
+export UPLOAD_DIR="uploads"
+
+if [ ! -d ".venv" ]; then
+    python3 -m venv .venv
+fi
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+uvicorn app.main:app --reload --port 8000
